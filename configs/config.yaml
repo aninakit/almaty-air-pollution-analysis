@@ -1,0 +1,20 @@
+experiment:
+  name: "Almaty Air Pollution Benchmark"
+  version: "1.0.0"
+  random_state: 42
+
+data:
+  sample_path: "data/sample/almaty_air_sample.csv"
+  primary_pollutant: "pm25"
+  secondary_pollutants: ["pm10", "no2"]
+
+variables:
+  calm_wind_threshold: 1.0  # m/s
+  spike_threshold_pm25: 35.0 # ug/m3
+
+guardrails:
+  max_missing_data_rate: 0.15
+  min_r2_calibration: 0.75
+
+logging:
+  log_output_path: "benchmark_results.log"
