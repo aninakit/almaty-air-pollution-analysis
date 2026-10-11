@@ -9,6 +9,7 @@
 How do heating season emissions and meteorological calm (wind speed $< 1.0\text{ m/s}$) synergistically impact fine particulate matter concentrations ($\text{PM}_{2.5}$, $\text{PM}_{10}$) and $\text{NO}_2$ in the mountain basin of Almaty?
 
 ## Repository Structure
+```text
 almaty-air-pollution-analysis/
 ├── configs/
 │   └── config.yaml          # Experiment parameters & variable settings
@@ -22,7 +23,7 @@ almaty-air-pollution-analysis/
 ├── LICENSE                  # Open-source MIT License
 ├── README.md                # Project documentation and quickstart guide
 └── requirements.txt         # Exact pinned Python package dependencies
----
+```
 
 ## Planned Benchmarks & Metrics
 
