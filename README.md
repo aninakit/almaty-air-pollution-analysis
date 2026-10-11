@@ -48,25 +48,20 @@ pip install -r requirements.txt
 
 # 2. Run the benchmark script on the sample dataset
 python src/benchmark.py
+```
 
-Option 2: Docker Environment
-Bash
+### Option 2: Docker Environment
+```bash
 # 1. Build Docker image
 docker build -t almaty-air-benchmark .
 
 # 2. Run benchmark inside container
 docker run --rm almaty-air-benchmark
-License
+```
+
+# 2. Run benchmark inside container
+docker run --rm almaty-air-benchmark
+## License
 Distributed under the MIT License.
 
 
----
-
-### Этап 4. Команды Git для отправки всего в репозиторий
-
-После того как вы создали файлы у себя на компьютере в папке проекта, выполните в терминале 3 команды:
-
-```bash
-git add .
-git commit -m "feat: complete Task 2 methodology benchmark setup"
-git push origin main
