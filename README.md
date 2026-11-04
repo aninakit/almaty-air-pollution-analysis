@@ -2,7 +2,15 @@
 
 Task 3 compares two implementations of the seasonal PM2.5 mean difference. At 8,000 rows the row loop averaged 320.405 ms and the Pandas aggregation averaged 0.555 ms. Both returned the same result on the repeated sample.
 
-[Read the two-page report](reports/task3_report.pdf) · [Inspect the executed notebook](notebooks/01_data_analysis.ipynb) · [View the mathematical model](docs/domain_model.md)
+[Read the submission report](reports/task3_report.pdf) · [Inspect the executed notebook](notebooks/01_data_analysis.ipynb) · [View the mathematical model](docs/domain_model.md)
+
+## Observed air quality in Almaty, 2021–2025
+
+The [AirData.kz city-day extract](data/environment/README.md) covers 1,823 dates. Across 451 observed winter days the mean PM2.5 concentration was **60.54 µg/m³**. Across 457 summer days it was **12.14 µg/m³**, a pooled difference of **48.41 µg/m³**. Each calendar year showed a positive winter–summer difference, ranging from 33.51 to 72.81 µg/m³. The December–February and June–August comparison describes a seasonal association. Changes in station coverage, weather and emissions can all contribute.
+
+Both implementations returned 48.40616 µg/m³ on the 908 distinct seasonal days. In 30 evaluation runs each, the row loop averaged **33.588 ± 6.145 ms** and Pandas averaged **1.010 ± 0.228 ms** (mean ± SD, zero failures). Method order alternated. The earlier synthetic load experiment remains a separate benchmark.
+
+[Yearly concentrations and counts](data/processed/observed_seasons.csv) · [Real-workload timing summary](data/processed/observed_method_summary.csv) · [Data attribution and reproducibility](data/environment/README.md)
 
 ## Project Information
 * **Author:** Abildayev Dinmukhammed
@@ -95,6 +103,7 @@ belongs in the terminal. Alternatively, activate your environment and run module
 ```bash
 python src/process_data.py
 python src/process_comparison.py
+python src/environment.py
 python src/visualize.py
 ```
 
@@ -169,7 +178,7 @@ These results describe the total execution time
 of the Python benchmark process, including
 interpreter startup and library imports.
 
-The environmental sample contains only 8 observations.
+The original pipeline fixture contains only 8 observations.
 Therefore, these benchmark results do not establish
 statistically reliable conclusions about air pollution
 patterns in Almaty.
@@ -253,7 +262,7 @@ and evaluation metrics is available here:
 
 
 ## License
-Distributed under the MIT License.
+Code is distributed under the MIT License. The AirData.kz extract and derived environmental results are attributed under CC BY-NC 4.0. See the [data license](data/environment/README.md).
 
 
 ## Citation

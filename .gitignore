@@ -55,3 +55,7 @@ Thumbs.db
 # Keep processed summaries
 !/data/processed/metrics_summary.csv
 !/data/processed/method_comparison_summary.csv
+
+!/data/raw/observed_days.jsonl
+!/data/processed/observed_seasons.csv
+!/data/processed/observed_method_summary.csv

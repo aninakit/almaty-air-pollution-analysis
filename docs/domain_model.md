@@ -236,3 +236,7 @@ all non-heating observations are non-spikes: complete separation prevents
 reliable unregularized logistic coefficient inference. The calm/non-heating
 combination is absent. No fitted interaction effect or p-value is reported.
 An observational seasonal contrast alone does not identify a causal effect.
+
+## External observation unit
+
+The independent data source for the seasonal description is AirData.kz. Each record is a city-day cluster average. The observed contrast uses the same difference-of-means equation as H1, substituting calendar winter and summer for heating status. The project threshold for a spike was defined for individual sample readings. The daily aggregate has a different time scale and carries no wind field, so the H2 interaction remains a proposed model. [Sampling frame and attribution](../data/environment/README.md).
