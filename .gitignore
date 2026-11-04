@@ -1,18 +1,57 @@
-# Python / Virtual Environment
+
+# ========================================
+# Python cache
+# ========================================
+__pycache__/
+*.py[cod]
+
+# ========================================
+# Virtual environments
+# ========================================
 .venv/
 venv/
+env/
 ENV/
-__pycache__/
-*.pyc
 
-# Jupyter Notebooks
+# ========================================
+# Jupyter temporary files
+# ========================================
 .ipynb_checkpoints/
 
-# OS and Logs
+# ========================================
+# IDE and operating system files
+# ========================================
+.vscode/
+.idea/
 .DS_Store
-*.log
+Thumbs.db
 
-# Heavy Data / Weights
-data/raw/
-data/processed/
+# ========================================
+# Logs and temporary files
+# ========================================
+*.log
+*.tmp
+*.bak
+
+# ========================================
+# Large datasets
+# ========================================
 *.parquet
+*.pkl
+*.pickle
+
+# ========================================
+# Research benchmark data
+# ========================================
+
+# Ignore other raw and processed datasets
+/data/raw/*
+/data/processed/*
+
+# Keep benchmark measurements
+!/data/raw/test_run.jsonl
+!/data/raw/method_comparison.jsonl
+
+# Keep processed summaries
+!/data/processed/metrics_summary.csv
+!/data/processed/method_comparison_summary.csv

@@ -1,0 +1,2 @@
+total_runs,warmup_runs,evaluation_runs,successful_runs,error_rate_percent,mean_ms,median_ms,std_ms,p25_ms,p75_ms,p95_ms,p99_ms,ci95_lower_ms,ci95_upper_ms
+35,5,30,30,0.0,616.7970333333334,609.673,53.494092957481556,579.3932500000001,651.8252500000001,717.08515,740.52854,598.5582433333333,636.766995
